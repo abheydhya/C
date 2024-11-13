@@ -1,371 +1,213 @@
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
-void dwframe()
-{
-	window(1,1,25,80);
-	textbackground(LIGHTBLUE);
-	textcolor(YELLOW);
-	clrscr();
-	gotoxy(2,2);
-	printf("©≥©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©∑");
-	gotoxy(2,3);
-	printf("©ß");
-	gotoxy(76,3);
-	printf("©ß");
-	gotoxy(2,4);
-	printf("©ß");
-	gotoxy(76,4);
-	printf("©ß");
-	gotoxy(2,5);
-	printf("©ß");
-	gotoxy(76,5);
-	printf("©ß");
-	gotoxy(2,6);
-	printf("©ß");
-	gotoxy(76,6);
-	printf("©ß");
-	gotoxy(2,7);
-	printf("©ß");
-	gotoxy(76,7);
-	printf("©ß");
-	gotoxy(2,8);
-	printf("©ß");
-	gotoxy(76,8);
-	printf("©ß");
-	gotoxy(2,9);
-	printf("©ß");
-	gotoxy(76,9);
-	printf("©ß");
-	gotoxy(2,10);
-	printf("©ß");
-	gotoxy(76,10);
-	printf("©ß");
-	gotoxy(2,11);
-	printf("©ß");
-	gotoxy(76,11);
-	printf("©ß");
-	gotoxy(2,11);
-	printf("©ß");
-	gotoxy(76,11);
-	printf("©ß");
-	gotoxy(2,12);
-	printf("©ß");
-	gotoxy(76,12);
-	printf("©ß");
-	gotoxy(2,14);
-	printf("©ß");
-	gotoxy(76,14);
-	printf("©ß");
-	gotoxy(2,15);
-	printf("©ß");
-	gotoxy(76,15);
-	printf("©ß");
-	gotoxy(2,16);
-	printf("©ß");
-	gotoxy(76,16);
-	printf("©ß");
-	gotoxy(2,17);
-	printf("©ß");
-	gotoxy(76,17);
-	printf("©ß");
-	gotoxy(2,18);
-	printf("©ß");
-	gotoxy(76,18);
-	printf("©ß");
-	gotoxy(2,19);
-	printf("©ß");
-	gotoxy(76,19);
-	printf("©ß");
-	gotoxy(2,20);
-	printf("©ß");
-	gotoxy(76,20);
-	printf("©ß");
-	gotoxy(2,21);
-	printf("©ß");
-	gotoxy(76,21);
-	printf("©ß");
-	gotoxy(2,22);
-	printf("©ß");
-	gotoxy(76,22);
-	printf("©ß");
-	gotoxy(2,23);
-	printf("©ß");
-	gotoxy(76,23);
-	printf("©ß");
-	gotoxy(2,24);
-	printf("©ª©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©ø");
-}
-void helpf() 
-{
-	dwframe();
-	gotoxy(25,4);
-	printf("^_^ª∂”≠ π”√…Ã»Àπ˝∫””Œœ∑£°^_^");
-	gotoxy(4,6);
-	printf("”Œœ∑Àµ√˜£∫");
-	gotoxy(5,7);
-	printf("»˝∏ˆ…Ã»À¥¯◊≈»˝∏ˆÀÊ¥”∫ÕªıŒÔπ˝∫”£¨¥¨√ø¥Œ◊Ó∂‡÷ªƒ‹‘ÿ¡Ω∏ˆ»À£¨");
-	gotoxy(5,8);
-	printf("“™«Û‘⁄π˝∫”∆⁄º‰£¨»Œ“ª∞∂…œ…Ã»Àµƒ»À ˝“™¥Û”⁄ªÚµ»”⁄ÀÊ¥”µƒ»À ˝£¨");
-	gotoxy(5,9);
-	printf("∑Ò‘ÚÀÊ¥”ª·…±µÙ…Ã»À«¿◊ﬂªıŒÔ°£");
-	gotoxy(5,11);
-	printf("”Œœ∑≤Ÿ◊˜£∫£®1£©“¿¥Œ ‰»Îπ˝∫”µƒ…Ã»À∫ÕÀÊ¥”»À ˝£ª");
-	gotoxy(5,12);
-	printf("          £®2£©∑«∑® ‰»Î∞¥º¸Ω´÷ÿ–¬ø™ º°£");
-	gotoxy(2,13);
-	printf("©«©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©•©œ");
-}
+
 char a[6];
 char b[6];
-void printcase(char a[],char b[])
+
+void setupConsole()
 {
-	int i,j,xa,xb,x0,ya,yb,y0;
- 	xa=xb=x0=ya=yb=y0=0;
- 	gotoxy(11,14);
- 	printf("¥À∞∂                ±À∞∂\n");
-  	for(i=0;i<6;i++) 
-  	{
-	   	if(a[i]=='A')
-	    		xa++;
-	   	else if (a[i]=='B')
-	    		xb++;
-	   	else if(a[i]=='0')
-	    		x0++;
-  	}
-  	gotoxy(11,15);
-  	for(i=1;i<=xa;i++) 
-  		printf("…Ã»À  ");
- 	gotoxy(11,16);
-  	for(i=1;i<=xb;i++)
-  		printf("ÀÊ¥”  ");
- 	gotoxy(11,17);
- 	for(i=1;i<=x0;i++)
-  		printf("   ");
-	
- 	for(j=0;j<6;j++)
- 	{
-	  	if(b[j]=='A')
-	   		ya++;
-	  	else if(b[j]=='B')
-	   		yb++;
-	 	else if(b[j]=='0')
-	   		y0++;
- 	}
-	gotoxy(31,15);
-	for(j=1;j<=ya;j++)
-	  	printf("…Ã»À ");
-	gotoxy(31,16);
-	for(j=1;j<=yb;j++)
-	  	printf("ÀÊ¥” ");
-	gotoxy(31,17);
-	for(j=1;j<=y0;j++)
-	   	printf("   ");
-	if(xa==0 && xb==0 && ya==3 && yb==3)
-	{
-	  	gotoxy(15,21);
-	  	printf("πßœ≤ƒ„£°ƒ„“—≥…π¶∞Ô÷˙…Ã»À∞≤»´π˝∫”£°∞¥»Œ“‚º¸ÕÀ≥ˆ...");
-	  	getch();
-	  	window(1,1,25,80);
-		textbackground(BLACK);
-		textcolor(LIGHTGRAY);
-		clrscr();
-	  	exit(0);
-	}
+    window(1, 1, 25, 80);
+    textbackground(LIGHTBLUE);
+    textcolor(YELLOW);
+    clrscr();
+}
+
+void drawFrame()
+{
+    int i;
+    gotoxy(2, 2);
+    printf("‚îè‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îì");
+    for (i = 3; i <= 23; i++) {
+        gotoxy(2, i);
+        printf("‚îÉ");
+        gotoxy(76, i);
+        printf("‚îÉ");
+    }
+    gotoxy(2, 24);
+    printf("‚îó‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îõ");
+}
+
+void displayHelp()
+{
+    setupConsole();
+    drawFrame();
+    gotoxy(25, 4);
+    printf("^_^Ê¨¢Ëøé‰ΩøÁî®ÂïÜ‰∫∫ËøáÊ≤≥Ê∏∏ÊàèÔºÅ^_^");
+    gotoxy(4, 6);
+    printf("Ê∏∏ÊàèËØ¥ÊòéÔºö");
+    gotoxy(5, 7);
+    printf("‰∏â‰∏™ÂïÜ‰∫∫Â∏¶ÁùÄ‰∏â‰∏™Èöè‰ªéÂíåË¥ßÁâ©ËøáÊ≤≥ÔºåËàπÊØèÊ¨°ÊúÄÂ§öÂè™ËÉΩËΩΩ‰∏§‰∏™‰∫∫Ôºå");
+    gotoxy(5, 8);
+    printf("Ë¶ÅÊ±ÇÂú®ËøáÊ≤≥ÊúüÈó¥Ôºå‰ªª‰∏ÄÂ≤∏‰∏äÂïÜ‰∫∫ÁöÑ‰∫∫Êï∞Ë¶ÅÂ§ß‰∫éÊàñÁ≠â‰∫éÈöè‰ªéÁöÑ‰∫∫Êï∞Ôºå");
+    gotoxy(5, 9);
+    printf("Âê¶ÂàôÈöè‰ªé‰ºöÊùÄÊéâÂïÜ‰∫∫Êä¢Ëµ∞Ë¥ßÁâ©„ÄÇ");
+    gotoxy(5, 11);
+    printf("Ê∏∏ÊàèÊìç‰ΩúÔºöÔºà1Ôºâ‰æùÊ¨°ËæìÂÖ•ËøáÊ≤≥ÁöÑÂïÜ‰∫∫ÂíåÈöè‰ªé‰∫∫Êï∞Ôºõ");
+    gotoxy(5, 12);
+    printf("          Ôºà2ÔºâÈùûÊ≥ïËæìÂÖ•ÊåâÈîÆÂ∞ÜÈáçÊñ∞ÂºÄÂßã„ÄÇ");
+    gotoxy(2, 13);
+    printf("‚î£‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚îÅ‚î´");
+}
+
+void printCase(char sideA[], char sideB[])
+{
+    int i, xa = 0, xb = 0, ya = 0, yb = 0;
+    gotoxy(11, 14);
+    printf("Ê≠§Â≤∏                ÂΩºÂ≤∏\n");
+
+    for (i = 0; i < 6; i++) {
+        if (sideA[i] == 'A') xa++;
+        else if (sideA[i] == 'B') xb++;
+    }
+    gotoxy(11, 15);
+    for (i = 1; i <= xa; i++) printf("ÂïÜ‰∫∫  ");
+    gotoxy(11, 16);
+    for (i = 1; i <= xb; i++) printf("Èöè‰ªé  ");
+
+    for (i = 0; i < 6; i++) {
+        if (sideB[i] == 'A') ya++;
+        else if (sideB[i] == 'B') yb++;
+    }
+    gotoxy(31, 15);
+    for (i = 1; i <= ya; i++) printf("ÂïÜ‰∫∫ ");
+    gotoxy(31, 16);
+    for (i = 1; i <= yb; i++) printf("Èöè‰ªé ");
+}
+
+int validateInput(int countA, int countB, int x, int y)
+{
+    return !(x < 0 || x > countA || y < 0 || y > countB || x + y < 1 || x + y > 2);
+}
+
+void updateCharacters(char source[], char destination[], int x, char type)
+{
+    int i, j;
+    for (i = 1; i <= x; i++) {
+        for (j = 0; j < 6; j++) {
+            if (source[j] == type) {
+                source[j] = '0';
+                break;
+            }
+        }
+        for (j = 0; j < 6; j++) {
+            if (destination[j] == '0') {
+                destination[j] = type;
+                break;
+            }
+        }
+    }
+}
+
+int isValidGameState(char sideA[], char sideB[])
+{
+    int aA = 0, aB = 0, bA = 0, bB = 0, i;
+    for (i = 0; i < 6; i++) {
+        if (sideA[i] == 'A') aA++;
+        else if (sideA[i] == 'B') aB++;
+        if (sideB[i] == 'A') bA++;
+        else if (sideB[i] == 'B') bB++;
+    }
+    return (aA == 3 || bA == 3 || aA == aB || bA == bB);
+}
+
+void startGame()
+{
+    int x, y, i;
+    char ch;
+Start:
+    displayHelp();
+    gotoxy(15, 16);
+    printf("ËØ∑Êåâ‰ªªÊÑèÈîÆÂºÄÂßãÊ∏∏ÊàèÔºàÊåâQÈîÆÈÄÄÂá∫Ôºâ...");
+    ch = getch();
+    if (ch == 'Q' || ch == 'q') {
+        setupConsole();
+        textbackground(BLACK);
+        textcolor(LIGHTGRAY);
+        clrscr();
+        exit(0);
+    }
+
+    for (i = 0; i < 3; i++) a[i] = 'A';
+    for (i = 3; i < 6; i++) a[i] = 'B';
+    memset(b, '0', sizeof(b));
+    printCase(a, b);
+
+    while (1) {
+        int countA = 0, countB = 0;
+        for (i = 0; i < 6; i++) {
+            if (a[i] == 'A') countA++;
+            else if (a[i] == 'B') countB++;
+        }
+
+        gotoxy(20, 18);
+        printf("ËæìÂÖ•ÂéªÂΩºÂ≤∏ÂïÜ‰∫∫ÁöÑ‰∫∫Êï∞Ôºö ");
+        scanf("%d", &x);
+        gotoxy(20, 18);
+        printf("ËæìÂÖ•ÂéªÂΩºÂ≤∏Èöè‰ªéÁöÑ‰∫∫Êï∞Ôºö ");
+        scanf("%d", &y);
+
+        if (!validateInput(countA, countB, x, y)) {
+            gotoxy(15, 21);
+            printf("ËæìÂÖ•ÊúâËØØÔºÅÔºÅÊåâ‰ªªÊÑèÈîÆÈáçÊñ∞ÂºÄÂßã...");
+            getch();
+            goto Start;
+        }
+
+        updateCharacters(a, b, x, 'A');
+        updateCharacters(a, b, y, 'B');
+        if (isValidGameState(a, b)) {
+            displayHelp();
+            printCase(a, b);
+        } else {
+            gotoxy(15, 21);
+            printf("ÂïÜ‰∫∫Ë¢´ÊùÄÔºåÊåâ‰ªªÊÑèÈîÆÈáçÊñ∞ÂºÄÂßã...");
+            getch();
+            goto Start;
+        }
+
+        countA = countB = 0;
+        for (i = 0; i < 6; i++) {
+            if (b[i] == 'A') countA++;
+            else if (b[i] == 'B') countB++;
+        }
+
+        gotoxy(20, 18);
+        printf("ËæìÂÖ•ÂõûÊ≠§Â≤∏ÂïÜ‰∫∫ÁöÑ‰∫∫Êï∞Ôºö ");
+        scanf("%d", &x);
+        gotoxy(20, 18);
+        printf("ËæìÂÖ•ÂõûÊ≠§Â≤∏Èöè‰ªéÁöÑ‰∫∫Êï∞Ôºö ");
+        scanf("%d", &y);
+
+        if (!validateInput(countA, countB, x, y)) {
+            gotoxy(15, 21);
+            printf("ËæìÂÖ•ÊúâËØØÔºÅÔºÅÊåâ‰ªªÊÑèÈîÆÈáçÊñ∞ÂºÄÂßã...");
+            getch();
+            goto Start;
+        }
+
+        updateCharacters(b, a, x, 'A');
+        updateCharacters(b, a, y, 'B');
+        if (isValidGameState(a, b)) {
+            displayHelp();
+            printCase(a, b);
+        } else {
+            gotoxy(15, 21);
+            printf("ÂïÜ‰∫∫Ë¢´ÊùÄÔºåÊåâ‰ªªÊÑèÈîÆÈáçÊñ∞ÂºÄÂßã...");
+            getch();
+            goto Start;
+        }
+
+        if (countA == 0 && countB == 0) {
+            gotoxy(15, 21);
+            printf("ÊÅ≠Âñú‰Ω†ÔºÅ‰Ω†Â∑≤ÊàêÂäüÂ∏ÆÂä©ÂïÜ‰∫∫ÂÆâÂÖ®ËøáÊ≤≥ÔºÅÊåâ‰ªªÊÑèÈîÆÈÄÄÂá∫...");
+            getch();
+            exit(0);
+        }
+    }
 }
 
 void main()
 {
-	int i,x,y,key,ca,cb,j,aA,aB,bA,bB;
-	char ch;
-Start:	
-	helpf();
-	gotoxy(15,16);
-	printf("«Î∞¥»Œ“‚º¸ø™ º”Œœ∑£®∞¥Qº¸ÕÀ≥ˆ£©...");
-	ch=getch();
-	if(ch=='Q'||ch=='q')
-	{
-		window(1,1,25,80);
-		textbackground(BLACK);
-		textcolor(LIGHTGRAY);
-		clrscr();
-		exit(0);
-	}
-	helpf();
-	 
-	for(i=0;i<3;i++)
-		a[i]='A';
-	for(i=3;i<6;i++)
-		a[i]='B';
-	for(i=0;i<6;i++)
-		b[i]='0';
-	printcase(a,b);
-	while(1)
-	{
-		gotoxy(20,18);
-		printf(" ‰»Î»•±À∞∂…Ã»Àµƒ»À ˝£∫ ");
-		scanf("%d",&x);
-		gotoxy(20,18);
-		printf(" ‰»Î»•±À∞∂ÀÊ¥”µƒ»À ˝£∫ ");
-		scanf("%d",&y);
-		for(ca=0,cb=0,i=0;i<6;i++) 
-		{
-			if(a[i]=='A')
-	    			ca++;
-			else if(a[i]=='B')
-	    			cb++;
-		}
-		if(x<0 || x>ca || y<0 || y>cb || x+y<1 ||x+y>2) 
-		{
-			gotoxy(15,21);
-			printf(" ‰»Î”–ŒÛ£°£°∞¥»Œ“‚º¸÷ÿ–¬ø™ º...");
-			getch();
-			goto Start;
-		}
-		for(i=1;i<=x;i++) 
-		{
-	  		for(j=0;j<6;j++)
-	   			if(a[j]=='A') 
-	   			{
-	    				a[j]='0';
-	    				break;
-	   			}
-		}
-		for(i=1;i<=x;i++) 
-		{
-	  		for(j=0;j<6;j++)
-	   			if(b[j]=='0') 
-	   			{
-	    				b[j]='A';
-	       				break;
-	   			}
-		}
-		for(i=1;i<=y;i++) 
-		{
-	  		for(j=0;j<6;j++)
-	   			if(a[j]=='B') 
-	   			{
-	    				a[j]='0';
-	    				break;
-	   			}
-		}
-		for(i=1;i<=y;i++) 
-		{
-	  		for(j=0;j<6;j++)
-	   			if(b[j]=='0') 
-	   			{
-	    				b[j]='B';
-	    				break;
-				}
-		}
-		for(aA=0,aB=0,i=0;i<6;i++) 
-		{
-	  		if(a[i]=='A')
-	   			aA++;
-	  		else if(a[i]=='B')
-	   			aB++;
-		}
-		for(bA=0,bB=0,i=0;i<6;i++) 
-		{
-	  		if(b[i]=='A')
-	   			bA++;
-	  		else if(b[i]=='B')
-	   			bB++;
-		}   
-	 
-		if((aA==3) ||(bA==3) || (aA==aB) || (bA==bB))  
-		{
-	      		helpf();
-	      		printcase(a,b);
-	         }
-		else
-		{
-			gotoxy(15,21);
-			printf("…Ã»À±ª…±£¨∞¥»Œ“‚º¸÷ÿ–¬ø™ º...");
-			getch();
-			goto Start;
-		}
-		gotoxy(20,18);
-		printf(" ‰»Îªÿ¥À∞∂…Ã»Àµƒ»À ˝£∫ ");
-		scanf("%d",&x);
-		gotoxy(20,18);
-		printf(" ‰»Îªÿ¥À∞∂ÀÊ¥”µƒ»À ˝£∫ ");
-		scanf("%d",&y);
-		for(ca=0,cb=0,i=0;i<6;i++)
-		{
-	  		if(b[i]=='A')
-	   			ca++;
-	  		else if(b[i]=='B')
-	   			cb++;
-		}
-		if(x<0 || x>ca || y<0 || y>cb || x+y<1 || x+y>2) 
-		{
-			gotoxy(15,21);
-	   		printf(" ‰»Î”–ŒÛ£°£°∞¥»Œ“‚º¸÷ÿ–¬ø™ º...");
-	   		getch();
-	  		goto Start;
-		}
-		for(i=1;i<=x;i++) 
-		{
-	  		for(j=0;j<6;j++)
-	   			if(b[j]=='A') 
-	   			{
-	    				b[j]='0';
-	    				break;
-	   			}
-		}
-		for(i=1;i<=x;i++) 
-		{
-	  		for(j=0;j<6;j++)
-	   			if(a[j]=='0') 
-	   			{
-	    				a[j]='A';
-	    				break;
-				}
-		}
-		for(i=1;i<=y;i++) 
-		{
-	  		for(j=0;j<6;j++)
-	   		if(b[j]=='B') 
-	   		{
-	    			b[j]='0';
-	    			break;
-	   		}
-		}
-		for(i=1;i<=y;i++) 
-		{
-	  		for(j=0;j<6;j++)
-	   		if(a[j]=='0') 
-	   		{
-	    			a[j]='B';
-				break;
-	   		}
-		}
-		for(aA=0,aB=0,i=0;i<6;i++) 
-		{
-	  		if(a[i]=='A')
-	   			aA++;
-	  		else if(a[i]=='B')
-	   			aB++;
-		}
-		for(bA=0,bB=0,i=0;i<6;i++) 
-		{
-	  		if(b[i]=='A')
-	   			bA++;
-	  		else if(b[i]=='B')
-	   			bB++;
-		}
-	 	if((aA==3) ||(bA==3) || (aA==aB) || (bA==bB))
-	 	{
-	  		helpf();
-	  		printcase(a,b);
-		}
-		else 
-		{
- 	  		gotoxy(15,21);
-	   		printf("…Ã»À±ª…±£¨∞¥»Œ“‚º¸÷ÿ–¬ø™ º...");
-	        	getch();
-	        	goto Start;
-	  	}
-	}
+    startGame();
 }
